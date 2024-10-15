@@ -1,26 +1,33 @@
 import React from "react";
 import "./login.css";
 import SignUp from "./SignUp";
-function Login(props) {
-  function getData() {
-    const f = false;
-    props.getData(f);
+function Login() {
+  function handleSubmit(e) {
+    e.preventDefault();
   }
+
   return (
-    <div className="main-login">
-      <input className="input mt-10 pl-2" type="email" placeholder="Email" />
+    <form className="main-login">
+      <input
+        className="input mt-10 pl-2"
+        type="email"
+        required={true}
+        placeholder="Email"
+      />
       <input
         className="input mt-10 pl-2"
         type="password"
         placeholder="Password"
       />
-      <button className="submit">Login</button>
+      <button className="submit" onClick={handleSubmit}>
+        Login
+      </button>
 
       <p className="p">New member?</p>
-      <a className="a" href={<SignUp />}>
+      <a className="a" href="#">
         Signup
       </a>
-    </div>
+    </form>
   );
 }
 

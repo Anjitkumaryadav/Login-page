@@ -5,8 +5,13 @@
     padding: 10px 0;    
     margin-left: 5%;
     margin-top: 20px;
+    border: none;
     
 }
+.input:focus {
+    outline: none;
+    border: none;
+  }
 .submit{
     background-color: rgb(39, 39, 39);
     color: white;
