@@ -3,7 +3,7 @@ import "./Home.css";
 import Login from "../components/Login";
 import SignUp from "../components/SignUp";
 function Home(data) {
-    const[isLogin, setIsLogin] = useState(true);
+    const[isLogin, setIsLogin] = useState(false);
     function getData(data){
         setIsLogin(data)
     }
