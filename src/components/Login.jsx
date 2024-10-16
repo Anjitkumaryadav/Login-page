@@ -20,7 +20,6 @@ function Login() {
       isValid = false;
     }
 
-    // Password validation (check if it's empty)
     if (password.trim() === "") {
       errors.password = "Password is required";
       isValid = false;
@@ -29,8 +28,8 @@ function Login() {
     setErrors(errors);
 
     if (isValid) {
-      // If form is valid, submit the form (you can handle the login logic here)
-      console.log("Form Submitted", { email, password });
+      // console.log("Form Submitted", { email, password });
+      console.log("Form submitted");
     }
   }
 

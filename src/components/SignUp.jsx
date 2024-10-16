@@ -7,7 +7,6 @@ function SignUp() {
   const [password, setPassword] = useState('');
   const [errors, setErrors] = useState({ name: '', email: '', password: '' });
 
-  // Separate refs for each input
   const nameRef = useRef();
   const emailRef = useRef();
   const passwordRef = useRef();
@@ -24,7 +23,6 @@ function SignUp() {
     let validationErrors = {};
     let isValid = true;
 
-    // Name validation (only letters and spaces allowed, minimum 4 characters)
     const nameRegex = /^[A-Za-z\s]+$/;
     if (name.trim() === '') {
       validationErrors.name = 'Name is required!';
@@ -40,7 +38,6 @@ function SignUp() {
       isValid = false;
     }
 
-    // Email validation (check if it's empty and if it matches a valid email format)
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (email.trim() === '') {
       validationErrors.email = 'Email is required!';
@@ -52,9 +49,8 @@ function SignUp() {
       isValid = false;
     }
 
-    // Password validation (at least 6 characters, one special character, and one capital letter)
-    const specialCharRegex = /[!@#$%^&*(),.?":{}|<>]/;  // Checks for special character
-    const capitalLetterRegex = /[A-Z]/;                 // Checks for capital letter
+    const specialCharRegex = /[!@#$%^&*(),.?":{}|<>]/;  
+    const capitalLetterRegex = /[A-Z]/;                 
     if (password.trim() === '') {
       validationErrors.password = 'Password is required!';
       passwordRef.current.focus();
@@ -77,8 +73,7 @@ function SignUp() {
 
     if (isValid) {
       console.log("Form submitted successfully");
-      console.log({ name, email, password });
-      // You can handle form submission here, like sending data to an API
+      // console.log({ name, email, password });
     }
   }
 
